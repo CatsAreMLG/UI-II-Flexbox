@@ -97,7 +97,7 @@ nav ul a {
 	transition: color 200ms ease;
 }
 nav ul a:hover {
-	color: #fff;
+	color: #555;
 }
 nav ul a:first-of-type {
 	margin: 0 2.5em 0 0;

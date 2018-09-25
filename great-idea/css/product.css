@@ -191,12 +191,26 @@ nav ul a {
 	font-weight: 900;
 	text-decoration: none;
 	transition: color 200ms ease;
+	position: relative;
 }
 
 nav ul a:hover {
 	color: #555;
 }
-
+nav ul a::before {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 1px;
+	left: 0;
+	right: 100%;
+	bottom: -.25rem;
+	background: #555;
+	transition: right 150ms ease-in-out;
+}
+nav ul a:hover::before {
+	right: 0;
+}
 nav ul a:first-of-type {
 	margin: 0 2.5em 0 0;
 }
@@ -207,29 +221,43 @@ nav ul {
 }
 
 header {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	/* background: cyan; */
-	/* align-items: center; */
+	padding-bottom: 2rem;
 	border-bottom: 1px solid black;
-	align-content: center;
 }
 #titleImg {
-	/* position: absolute; */
-	/* background: rgb(46, 126, 66); */
 	background-image: url('../img/services-header.jpg');
 	background-repeat: no-repeat;
 	height: 23vmin;
 	background-size: 100%;
 	width: 100%;
 }
-.services {
-	padding: 1.5em 0;
+.product {
+	background: #999;
+	background-image: url('../img/services-header.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+	width: 100%;
+	height: auto;
+	padding: 5em 15%;
 	font-size: 1.125rem;
+	color: white;
+	text-align: center;
 }
-.services h1 {
-	font-size: 1.5em;
+.product h1 {
+	font-size: 2em;
+	position: relative;
+}
+.product h1::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 1px;
+	width: 1em;
+	right: 50%;
+	transform: translateX(50%);
+	bottom: -.5rem;
+	background: rgba(255,255,255,.8);
 }
 hr {
 	border: 1px solid black;
@@ -254,6 +282,9 @@ h2 {
 	padding: 2em 1em;
 	border: 1px solid black;
 }
+.container section:nth-child(odd) {
+	background: #e0e0e0;
+}
 .container h2 {
 	padding: 0;
 	margin: .5rem 0 1rem;
@@ -270,6 +301,14 @@ h2 {
 	font-size: .9rem;
 	color: black;
 	text-decoration: none;
+	transition: color 100ms ease-in-out,
+				background 100ms ease-in-out,
+				border 100ms ease-in-out;
+}
+.container a:hover {
+	background: rgba(0,0,0,.8);
+	color: white;
+	border: 1px solid currentColor;
 }
 .footer {
 	padding-top: 2rem;
