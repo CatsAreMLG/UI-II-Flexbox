@@ -62,5 +62,146 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
-
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Your code starts here! */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+body {
+	width: 1265px;
+	margin: 0 auto;
+	/* margin: 0em 20em; */
+	background: #111;
+}
+#fullPage {
+	padding: 0 6em;
+	background: white;
+}
+nav {
+	position: relative;
+	display: flex;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 1.05em;
+	position: relative;
+	width: 100%;
+	height: 10vh;
+	background: white;
+	padding: 0 6em;
+	top: 0;
+	z-index: 1000;
+	align-items: center;
+}
+nav ul a {
+	/* display: inline-block; */
+	margin: 0 2em;
+	color: #ccc;
+	font-weight: 900;
+	text-decoration: none;
+	transition: color 200ms ease;
+}
+nav ul a:hover {
+	color: #fff;
+}
+nav ul a:first-of-type {
+	margin: 0 2.5em 0 0;
+}
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+}
+#logo {
+	width: 20%;
+	position: absolute;
+	right: 1em;
+}
+header {
+	position: relative;
+	display: flex;
+	/* background: cyan; */
+	align-items: center;
+}
+#titleImg {
+	/* position: absolute; */
+	/* background: rgb(46, 126, 66); */
+	background-image: url('../img/header-img.png');
+	background-repeat: no-repeat;
+	background-size: 95%;
+	height: 57vh;
+	width: 50%;
+}
+#title {
+	width: 50%;
+	height: 67vh;
+	/* background: rgb(84, 40, 155); */
+	font-family: 'Source Code Pro', monospace;
+	font-size: 6em;
+	text-align: center;
+	padding: 1.5em .7em;
+	line-height: .85em;
+}
+#title h1 {
+	letter-spacing: 2px;
+}
+#title h1:last-of-type {
+	margin-bottom: .1em;
+}
+#title a {
+	vertical-align: top;
+	background: white;
+	padding: .1em 2em;
+	font-size: 1.5rem;
+	text-decoration: none;
+	border: 1px solid #555;
+	color: black;
+	transition: color 200ms ease,
+				background 200ms ease;
+}
+#title a:hover {
+	background: #555;
+	color: white;
+}
+hr {
+	border: 1px solid #555;
+}
+h2 {
+	margin: 2em 0 1em;
+	font-family: 'Source Code Pro',
+	monospace;
+	font-weight: 900;
+}
+.middle-img-div {
+	height: 223px;
+	background-image: url("../img/mid-page-accent.jpg");
+	background-size: cover;
+}
+.container1 {
+	width: 100%;
+	display: flex;
+	margin: 0 0 3em 0;
+	font-size: 1.25em;
+	justify-content: space-between;
+}
+.container2 {
+	width: 100%;
+	display: flex;
+	font-size: 1.25em;
+	margin: 0 0 3em 0;
+	justify-content: space-between;
+}
+#about, #features {
+	width: 49%;
+}
+#services, #product, #vision {
+	width: 32%;
+}
+#contact {
+	padding-top: .8em;
+	font-size: 1.25em;
+}
+#contact p {
+	padding: .5em;
+	padding-left: 0;
+}
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 2em 0 9em 0;
+	font-size: 1.1em;
+}
