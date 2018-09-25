@@ -358,9 +358,15 @@ footer {
 	nav ul {
 		padding: 1rem;
 		width: 100%;
-		justify-content: space-evenly;
+		justify-content: space-between;
+		/* justify-content: space-evenly; */
 		align-items: center;
 		margin: 0;
+	}
+	@supports (justify-content: space-evenly) {
+		nav ul {
+			justify-content: space-evenly;
+		}
 	}
 	nav ul li {
 		margin: 0;
